@@ -1,14 +1,24 @@
 (function () {
 'use strict';
 
-angular.module('myFirstApp', [])
+angular.module('calculatorModule',[])
+.controller('CalculatorControl', function ($scope) {
+$scope.name="";
+$scope.totalValue=0;
 
-.controller('MyFirstController', function ($scope) {
-  $scope.name = "Ashir";
+$scope.displayNumber =function () {
+  var totalNameValue =calculateNumericValue($scope.name);
+  $scope.totalValue=totalNameValue;
+};
 
-  $scope.sayHello = function () {
-    return "Hello Coursera!";
-  };
+function calculateNumericValue(string) {
+  var totalSTringValue=0;
+  for(var i=0; i<string.length;i++)
+  {
+    totalSTringValue += string.charCodeAt(i);
+  }
+  return totalSTringValue;
+}
+
 });
-
 })();
