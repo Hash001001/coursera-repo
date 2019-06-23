@@ -9,18 +9,14 @@
 <h1>Expression and Interpolation</h1>
   <body>
 <div ng-controller="MsgController">
-Message is: <br>
-{{name}}
+Orginal Message is: {{mynameFun()}} <br>
+Filter Message is: {{filterFunction()}}
 <div>
 
 <button type="button"  ng-click="changePic()">Change</button>
 
 <img ng-src="images/ashir_{{changeValue}}.jpg">
-
-
 </div>
-
-
 </div>
   </body>
 </html>
