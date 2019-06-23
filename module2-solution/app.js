@@ -14,12 +14,10 @@ function ToBuyController(ShoppingListCheckOffService) {
     ShoppingListCheckOffService.buyItem(index);
   };
 }
-
 AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
 function AlreadyBoughtController(ShoppingListCheckOffService) {
   var bought = this;
   bought.items = ShoppingListCheckOffService.getBoughtItems();
-
 }
 
 function ShoppingListCheckOffService() {
