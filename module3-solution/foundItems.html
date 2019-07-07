@@ -2,17 +2,17 @@
   <ul ng-repeat="item in foundCtrl.items" class="demo-list-three mdl-list">
     <li class="mdl-list__item mdl-list__item--two-line">
       <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-avatar">restaurant menu</i>
-        <span>{{ item.name }} [{{ item.short_name }}]</span>
+        <i class="material-icons mdl-list__item-avatar">restaurant menu</i><br/>
+        <span>[{{ item.short_name }}] {{ item.name }}</span>
         <span class="mdl-list__item-sub-title">{{item.description}}</span>
       </span>
       <span class="mdl-list__item-secondary-content">
-        <a ng-click="foundCtrl.onRemove({index: $index});" class="mdl-list__item-secondary-action" href="#"><i class="material-icons" alt="Don't want this">clear</i></a>
+        <a ng-click="foundCtrl.onRemove({index: $index});" class="mdl-list__item-secondary-action" href="#"><i class="material-icons" alt="Don't want this">Don't want this one!</i></a>
       </span>
     </li>
   </ul>
 
-  <div ng-if="foundCtrl.isBeforeSearch()" class="message">Please input search term above and click NARROW IT DOWN FOR ME!</div>
+  <div ng-if="foundCtrl.isBeforeSearch()" class="message">Please type your  desired menu above and click "NARROW IT DOWN FOR ME"</div>
   <div ng-if="foundCtrl.isNothingFound()" class="message">Nothing found.</div>
 
 </div>
